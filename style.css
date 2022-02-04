@@ -1,0 +1,275 @@
+@font-face{
+    font-family: 'roboto';
+    src: url('./fonts/roboto-regular.woff') format('woff');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    --sidebar-color: #124E78;
+    --background-color: #f0f0c9;
+    --greyish-color: rgb(95, 95, 95);
+    font-family: 'roboto';
+}
+
+body, html{
+    height: 100%;
+}
+
+
+/* whole document grid start*/
+.gridContainer{
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.gridContainer > div:nth-child(1){
+    grid-column: 2 / -1;
+    display: grid;
+}
+
+.gridContainer > div:nth-child(2){
+    grid-row: 1 / -1;
+    display: grid;
+    background-color: var(--sidebar-color);
+    align-content: start;
+    gap: 44px;
+}
+
+.gridContainer > div:nth-child(3){
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: var(--background-color);
+    padding: 20px 20px 50px 20px;
+    gap: 20px;
+}
+/*whole document grid end*/
+
+/*header begin*/
+
+.header{
+    font-weight: 600;
+}
+.bottomLeftSide > div > div{
+    font-size: 30px;
+}
+
+.topHeader,
+.bottomHeader{
+    display: flex;
+    align-items: center;
+    padding: 0px 40px 0px 40px;
+}
+
+.headerLeftSide{
+    display: flex;
+    align-items: center;
+    flex: 4;
+    gap: 10px;
+}
+
+.headerRightSide,
+.bottomRightSide{
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    flex: 1;
+    gap: 30px;
+}
+
+.headerRightSide{
+    font-size: 20px;
+}
+
+.headerRightSide img{
+    width: 40px;
+}
+
+.headerLeftSide > input{
+    width: 600px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: var(--background-color);
+    border: 0px;
+    padding: 0px 15px 0px 15px;
+}
+
+.headerLeftSide > svg{
+    justify-self: center;
+}
+
+.bottomLeftSide{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 6;
+}
+.bottomLeftSide{
+    line-height: 24px;
+}
+.bottomLeftSide img{
+    width: 60px;
+}
+
+.bottomRightSide button{
+    width: 90px;
+    padding: 9px 0px 9px 0px;
+    border-radius: 50px;
+    border: 0px;
+    background-color: var(--sidebar-color);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/*header end*/
+
+/*sidebar begin*/
+
+.sidebar{
+    padding: 20px 0px 0px 20px;
+    color: white;
+}
+
+.sidebar > h1,
+.sidebar > .middleSection li,
+.sidebar > .bottomSection li{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    gap: 15px;
+}
+
+li{
+    margin: 12px 0px 12px 0px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.sidebar > h1 svg,
+.sidebar > .middleSection li svg,
+.sidebar > .bottomSection li svg{
+    justify-self: center;
+    color: white;
+}
+/*sidebar end*/
+
+/* main content start*/
+.leftGrid{
+    height: auto;
+    display: grid;
+    grid-template-rows: 35px 1fr;
+    grid-template-columns: 1fr;
+}
+
+.mainArea h3{
+    font-size: 25px;
+}
+
+
+.contentCards{
+    grid-row: 2 / -1;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.contentCard{
+    display: flex;
+    
+    
+}
+
+.card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    gap: 10px;
+}
+
+.card > div:nth-child(1){
+    flex: 1;
+    color: var(--greyish-color);
+}
+
+.card h3{
+    color: black;
+}
+
+.bottomIcons{
+    display: flex;
+    align-self: end;
+    gap: 25px;
+}
+
+.bar{
+    background-color: black;
+    content: '';
+    width: 12px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.rightSide{
+    display: grid;
+    gap: 20px;
+}
+
+.rightGridTop{
+    display: grid;
+    grid-template-rows: 35px 1fr;
+}
+
+.announcements{
+    display: grid;
+    padding: 35px 30px 35px 30px;
+    border-radius: 15px;
+    background-color: white;
+    gap: 10px;
+    color: var(--greyish-color);
+}
+
+.announcements h4{
+    color: black;
+}
+
+.announcements > div:nth-child(1),
+.announcements > div:nth-child(2){
+    border-bottom: 1px solid var(--greyish-color);
+}
+
+.rightGridBottom{
+    display: grid;
+    grid-template-rows: 35px 1fr;
+}
+
+.rightGridBottom > .users img{
+    width: 40px;
+}
+.users{
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    color: var(--greyish-color);
+}
+
+.users span{
+    color: black;
+}
+.user{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/*main content end*/
